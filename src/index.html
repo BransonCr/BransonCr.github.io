@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branson Crawford</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/frog3.png">
+    <link rel="icon" href="/assets/frog3.png">
+    <script type="module" src="main.js"></script>
+    <script>
+        document.getElementById('game-btn').addEventListener('click', function() {
+            window.open('game.html', '_blank', 'width=800,height=600');
+        });
+    </script>
+</head>
+<body class="font-thin">
+    <div id="three-container" class="absolute top-0 left-0 w-full h-full -z-10"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="lg:col-span-1 overflow-auto lg:overflow-hidden lg:ml-20 xl:ml-16 flex flex-col">
+            <!-- First Column Content -->
+            <div class="lg:h-screen sticky">
+                <div class="relative mt-4 ml-4">
+                    <!--Theme Tester-->
+                    <label class="swap swap-rotate hover:text-customRed duration-300">
+                        <!-- this hidden checkbox controls the state -->
+                        <input type="checkbox" class="theme-controller" value="light" />
+                        <!-- sun icon -->
+                        <svg class="swap-off fill-current w-10 h-10 hover:text-customRed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
+                        </svg>
+                        <!-- moon icon -->
+                        <svg class="swap-on fill-current w-10 h-10 hover:text-customRed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/>
+                        </svg>
+                    </label>
+                </div>
+
+                <!--Name Plate-->
+                <div class="relative text-center lg:left-20 p-4 xl:left-40 right-3">
+                    <h1 class="font-light text-4xl tracking-tight lg:text-7xl lg:text-left hover:text-customRed hover:duration-300">
+                        Branson Crawford
+                        <!--THE Image next to the name, just a place holder for now-->
+                        <img src="/assets/frog3.png" class="inline h-14 w-14 lg:h-auto hover:-translate-y-2 duration-300">
+                    </h1>
+                    <h2 class="text-lg font-medium tracking-tight lg:text-2xl lg:text-left ">Future Unemployed CS major, UBC</h2> <br>
+                    <h3 class="text-lg tracking-tight lg:text-2xl lg:text-left">Learning something everyday</h3><br>
+                    <div class="lg:hidden lg:justify-center sm:block space-x-5 top-7">
+                        <a href="https://www.linkedin.com/in/Chadkatz" target="_blank" class="">
+                            <i class="bi bi-linkedin text-3xl hover:text-customRed"></i>
+                        </a>
+                        <a href="https://github.com/Chad1704" target="_blank" class="">
+                            <i class="bi bi-github text-3xl hover:text-customRed hover:duration-200"></i>
+                        </a>
+                        <a href="/assets/chadk2024resume.pdf" class="hover:duration-300">
+                            <i class="bi bi-file-earmark-person text-3xl hover:text-customRed hover:duration-200"></i>
+                        </a>
+                    </div>
+                    
+                    <!--Link bar-->
+                    <div class="lg:block hidden relative text-left p-4 mt-12 max-w-40 text-2xl">
+                        <ul class="space-y-4">
+                            <li class="hover:translate-x-4 duration-300 hover:text-customRed hover:underline hover:decoration-dashed">
+                                <a href="#about" class="block w-full max-w-xl">About</a>
+                            </li>
+                            <li class="hover:translate-x-4 duration-300 hover:text-customRed hover:underline hover:decoration-dashed">
+                                <a href="projects.html" class="block w-full max-w-xl">Projects</a>
+                            </li>
+                            <!-- <li class="hover:translate-x-4 duration-300 hover:text-customRed hover:underline hover:decoration-dashed">
+                                <button id="game-btn" class="fixed bottom-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-red-800 transition duration-300">
+                                    Fun Suprise?
+                                </button>
+                            </li> -->
+                            <!--Game Container (Hidden by Default) Could be a fun little easter egg -->
+                            <div id="game-container" class="fixed bottom-4 left-4 w-64 h-64 bg-black border border-gray-500 hidden rounded-lg shadow-lg">
+                                <canvas id="gameCanvas" class="w-full h-full"></canvas>
+                                <button id="close-game" class="absolute top-1 right-1 bg-red-500 text-white text-xs px-2 py-1 rounded-full">✖</button>
+                            </div> 
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Icon Bar (Full Screen) -->
+                <div class="lg:block hidden max-w-3xl text-center mt-10 space-x-5 bg-st">
+                    <!-- Icon links -->
+                    <a href="https://www.linkedin.com/in/branson-crawford-43651b333/" target="_self" class="">
+                        <i class="bi bi-linkedin text-3xl hover:text-customRed hover:duration-200"></i>
+                    </a>
+                    <!--ADD A RESUME HERE AT SOME POINT WHEN I MAKE IT-->
+                    <a href="https://github.com/dockerhopper" target="_blank" class="">
+                        <i class="bi bi-github text-3xl hover:text-customRed hover:duration-200"></i>
+                    </a>
+                    <a href="/asset/BransonServingResume.pdf" class="hover:duration-300">
+                        <i class="bi bi-file-earmark-person text-3xl hover:text-customRed hover:duration-200"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Second Column -->
+        <div class="lg:col-span-1 lg:h-screen w-full overflow-auto">
+            <div class="col-span-1 lg:ml-3 lg:mr-3 xl:mr-32">
+                <!-- Wrapper to constrain width -->
+                <div class="max-w-screen mx-auto">
+                    <!--About Me-->
+                    <div id="about"></div>
+                    <div class="lg:hidden lg:justify-center sm:block space-x-8 top-7">
+                        <h1 class="text-lg font-medium tracking-tight lg:text-2xl text-center">About Me</h1>
+                    </div>
+                    <div class="relative text-left sm:ml-1 md:ml-1 lg:top-24 right-2 p-4 text-1xl md:mr-10">
+                        <h3>Hello my name is Branson, I enjoy doing stuff</h3>
+                        <br><p></p>
+                        <br><p></p>
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="lg:hidden lg:justify-center sm:block space-x-5 top-7">
+                        <h1 class="text-lg font-medium tracking-tight lg:text-2xl lg:text-left text-center">Projects</h1>
+                    </div>
+
+                    <!--Branson Crawford com-->
+                    <div>
+                        <div class="lg:mr-5 lg:mt-32 mt-5 flex justify-center items-right">
+                            <a href="/assets/Chadkatz writeup.pdf">
+                                <div class="card w-96 h-64 bg-base-100 shadow-xl image-full hover:w-120 hover:h-80 transition-all duration-300">
+                                    <figure><img src="/assets/image screenshot.PNG" alt="Shoes" /></figure>
+                                    <div class="card-body">
+                                        <h2 class="card-title">Branson Crawford</h2>
+                                        <p>Learning what it takes to make a first Project and front end programming</p>
+                                        <div class="card-actions flex justify-between">
+                                            <div>
+                                                <div class="badge badge-neutral">2024-Apr-4th</div>
+                                                <div class="badge badge-outline">Html</div>
+                                                <div class="badge badge-outline">Css</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--WIP-->
+                    <div class="lg:mr-5 lg:mt-5 mt-5 flex justify-center items-right">
+                        <a href="#">
+                            <div class="card w-96 h-64 bg-base-100 shadow-xl image-full hover:w-120 hover:h-80 transition-all duration-300">
+                                <figure><img src="/assets/frog3.png" alt="Shoes" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">Possible Api Project</h2>
+                                    <p>Learning about Api have not come up with good idea yet</p>
+                                    <div class="card-actions flex justify-between">
+                                        <div>
+                                            <div class="badge badge-neutral">In Progress</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--WIP-->
+                    <div class="lg:mr-5 lg:mt-5 mt-5 flex justify-center items-right">
+                        <a href="#">
+                            <div class="card w-96 h-64 bg-base-100 shadow-xl image-full hover:w-120 hover:h-80 transition-all duration-300">
+                                <figure><img src="/assets/frog3.png"></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">Unnamed Project 3</h2>
+                                    <p>Place Holder</p>
+                                    <div class="card-actions flex justify-between">
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--Buttons-->
+                    <div class="container flex justify-center items-center mt-10 md:mb-10 lg:w-auto">
+                        <a href="projects.html">
+                            <button class="btn btn-outline mr-3 ml-3">See All Projects</button>
+                        </a>
+                        <a href="blog.html">
+                            <div class="lg:hidden">
+                                <button class="btn btn-outline">Blog</button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="lg:block hidden">
+                        <h5 style="text-align: center;">Coded in visual studio code by me. Built with TailWind CSS and Daisy UI, deployed using Vite.</h5><br>
+                        <div class="container flex justify-center items-center mt-10">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </script>
+    </body>
+</html>
