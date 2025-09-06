@@ -375,6 +375,30 @@
         </div>
     </div>
     <script>
+               // Add typing effect to the main title
+        // function typeWriter(element, text, speed = 1000) {
+        //     let i = 0;
+        //     element.innerHTML = '';
+            
+        //     function type() {
+        //         if (i < text.length) {
+        //             element.innerHTML += text.charAt(i);
+        //             i++;
+        //             setTimeout(type, speed);
+        //         }
+        //     }
+            
+        //     type();
+        // }
+
+        // // Initialize typing effect after page load
+        // setTimeout(() => {
+        //     const mainTitle = document.querySelector('h1');
+        //     if (mainTitle) {
+        //         const originalText = mainTitle.textContent;
+        //         typeWriter(mainTitle, originalText, 150);
+        //     }
+        // }, 1000);
         // Mobile menu functionality
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const closeMenuButton = document.getElementById('close-menu');
@@ -495,30 +519,7 @@
             });
         }
 
-        // Add typing effect to the main title
-        function typeWriter(element, text, speed = 1000) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            
-            type();
-        }
 
-        // Initialize typing effect after page load
-        setTimeout(() => {
-            const mainTitle = document.querySelector('h1');
-            if (mainTitle) {
-                const originalText = mainTitle.textContent;
-                typeWriter(mainTitle, originalText, 150);
-            }
-        }, 1000);
 
         // Add parallax effect to background elements
         window.addEventListener('scroll', () => {
