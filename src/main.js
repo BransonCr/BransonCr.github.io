@@ -38,8 +38,8 @@ scene.add(light);
 function animate() { 
     requestAnimationFrame(animate);
     torus.rotation.x += 0.001;
-    torus.rotation.y += 0.001;
-    torus.rotation.z += 0.001;
+    torus.rotation.y += 0.0015;
+    torus.rotation.z += 0.0019;
 
     rotateCube();
     renderer.render(scene, camera);
