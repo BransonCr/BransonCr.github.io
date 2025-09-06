@@ -8,6 +8,7 @@
     <meta name="keywords" content="Branson Crawford, Computer Science, UBC, Web Development, Software Development">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="theme.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/assets/frog3.png">
     <link rel="icon" href="/assets/frog3.png">
@@ -19,7 +20,7 @@
         });
     </script>
 </head>
-<body class="font-thin">
+<body class ="font-thin h-screen overflow-hidden">
     <div id="three-container" class="absolute top-0 left-0 w-full h-full -z-10"></div>
     <div class="grid grid-cols-1 lg:grid-cols-2">
         <div class="lg:col-span-1 overflow-auto lg:overflow-hidden lg:ml-20 xl:ml-16 flex flex-col">
@@ -43,19 +44,19 @@
 
                 <!--Name Plate-->
                 <div class="relative text-center lg:left-20 p-4 xl:left-40 right-3">
-                    <h1 class="font-light text-4xl tracking-tight lg:text-7xl lg:text-left hover:text-customRed hover:duration-300">
+                    <h1 class="font-light text-4xl tracking-tight lg:text-7xl lg:text-left hover:text-customRed hover:duration-200">
                         Branson Crawford
                     </h1>
-                    <h2 class="text-lg font-medium tracking-tight lg:text-2xl lg:text-left ">Future Unemployed CS major, UBC</h2> <br>
+                    <h2 class="text-lg font-medium tracking-tight lg:text-2xl lg:text-left ">CS major, Math Minor UBCO</h2> <br>
                     <h3 class="text-lg tracking-tight lg:text-2xl lg:text-left">Learning something everyday</h3><br>
                     <div class="lg:hidden lg:justify-center sm:block space-x-5 top-7">
-                        <a href="https://www.linkedin.com/in/Chadkatz" target="_blank" rel="noopener noreferrer" class="">
+                        <a href="https://www.linkedin.com/in/branson-crawford-43651b333/" target="_blank" rel="noopener noreferrer" class="">
                             <i class="bi bi-linkedin text-3xl hover:text-customRed"></i>
                         </a>
-                        <a href="https://github.com/Chad1704" target="_blank" rel="noopener noreferrer" class="">
+                        <a href="https://github.com/BransonCr" target="_blank" rel="noopener noreferrer" class="">
                             <i class="bi bi-github text-3xl hover:text-customRed hover:duration-200"></i>
                         </a>
-                        <a href="/assets/chadk2024resume.pdf" class="hover:duration-300">
+                        <a href="/assets/" class="hover:duration-300">
                             <i class="bi bi-file-earmark-person text-3xl hover:text-customRed hover:duration-200"></i>
                         </a>
                     </div>
@@ -90,10 +91,10 @@
                         <i class="bi bi-linkedin text-3xl hover:text-customRed hover:duration-200"></i>
                     </a>
                     <!--ADD A RESUME HERE AT SOME POINT WHEN I MAKE IT-->
-                    <a href="https://github.com/dockerhopper" target="_blank" rel="noopener noreferrer" class="">
+                    <a href="https://github.com/BransonCr" target="_blank" rel="noopener noreferrer" class="">
                         <i class="bi bi-github text-3xl hover:text-customRed hover:duration-200"></i>
                     </a>
-                    <a href="/assets/BransonServingResume.pdf" class="hover:duration-300">
+                    <a href="./asset/SW2025T2.pdf" download="BransonResume.pdf" class="hover:duration-300">
                         <i class="bi bi-file-earmark-person text-3xl hover:text-customRed hover:duration-200"></i>
                     </a>
                 </div>
@@ -113,7 +114,7 @@
                     </div>
                     <div class="relative text-left sm:ml-1 md:ml-1 lg:top-24 right-2 p-4 text-1xl md:mr-10">
                         <h3 class="text-2xl font-medium mb-4">About Me</h3>
-                        <p class="mb-4">Hello! I'm Branson, a Computer Science major at UBC passionate about software development and technology. I'm currently focused on building my skills in web development and exploring various programming paradigms.</p>
+                        <p class="mb-4">Hello! I'm Branson, a Computer Science major and math minor at UBC! I'm passionate about software development and technology.</p>
                        
                         <div class="mt-6">
                             <h4 class="text-xl font-medium mb-2">Skills</h4>
@@ -131,66 +132,111 @@
                         <h1 class="text-lg font-medium tracking-tight lg:text-2xl lg:text-left text-center">Projects</h1>
                     </div>
 
-                    <!--Branson Crawford com-->
-                    <div>
-                        <div class="lg:mr-5 lg:mt-32 mt-5 flex justify-center items-right">
-                            <a href="/assets/BransonCrawfordWriteup.pdf">
-                                <div class="card w-96 h-64 bg-base-100 shadow-xl image-full hover:w-120 hover:h-80 transition-all duration-300">
-                                    <figure><img src="/assets/image screenshot.PNG" alt="Branson Crawford Website" class="hover:scale-105 transition-transform duration-300" /></figure>
-                                    <div class="card-body">
-                                        <h2 class="card-title">Branson Crawford</h2>
-                                        <p>Learning what it takes to make a first Project and front end programming</p>
-                                        <div class="card-actions flex justify-between">
-                                            <div>
-                                                <div class="badge badge-neutral">2024-Apr-4th</div>
-                                                <div class="badge badge-outline">Html</div>
-                                                <div class="badge badge-outline">Css</div>
+                    <!-- DockerKilo Project Showcase -->
+                    <div class="lg:mr-5 lg:mt-32 mt-5 flex justify-center items-center">
+                        <div class="card w-full max-w-4xl bg-gradient-to-r from-blue-50 to-purple-50 shadow-2xl border-0 overflow-hidden">
+                            <div class="card-body p-0">
+                                <div class="md:flex">
+                                    <div class="md:w-2/3 p-8">
+                                        <div class="flex items-center mb-4">
+                                            <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                                                <i class="bi bi-code-slash text-2xl text-white"></i>
                                             </div>
+                                            <div>
+                                                <h2 class="card-title text-3xl text-gray-800">DockerKilo</h2>
+                                                <p class="text-blue-600 font-medium">Featured Project</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                                            I took the Kilo text editor and added the ability to work with multiple files at once. 
+                                            It's written in C and lets you have up to 10 files open simultaneously in a single terminal session.
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap gap-2 mb-6">
+                                            <span class="badge badge-primary">C</span>
+                                            <span class="badge badge-secondary">Terminal</span>
+                                            <span class="badge badge-accent">Text Editor</span>
+                                            <span class="badge badge-outline">Multi-buffer</span>
+                                            <span class="badge badge-outline">Syntax Highlighting</span>
+                                        </div>
+                                        
+                                        <div class="flex space-x-4">
+                                            <a href="https://github.com/dockerhopper/dockerKilo" target="_blank" 
+                                               class="btn btn-primary hover:scale-105 transition-transform duration-300">
+                                                <i class="bi bi-github mr-2"></i>View on GitHub
+                                            </a>
+                                            <a href="dockerkilo.html" class="btn btn-outline hover:scale-105 transition-transform duration-300">
+                                                Learn More
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="md:w-1/3 bg-gradient-to-br from-blue-600 to-purple-600 p-8 flex items-center justify-center text-white">
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="bi bi-terminal text-3xl"></i>
+                                            </div>
+                                            <h4 class="text-xl font-semibold mb-2">Terminal-Based Editor</h4>
+                                            <p class="text-blue-100 text-sm">Built for developers who love the command line</p>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!--WIP-->
-                    <div class="lg:mr-5 lg:mt-5 mt-5 flex justify-center items-right">
-                        <a href="#">
-                            <div class="card w-96 h-64 bg-base-100 shadow-xl image-full hover:w-120 hover:h-80 transition-all duration-300">
-                                <figure><img src="/assets/frog3.png" alt="API Project Preview" class="hover:scale-105 transition-transform duration-300"></figure>
-                                <div class="card-body">
-                                    <h2 class="card-title">API Project</h2>
-                                    <p>Exploring API integration and backend development</p>
-                                    <div class="card-actions flex justify-between">
-                                        <div>
-                                            <div class="badge badge-neutral">In Progress</div>
-                                            <div class="badge badge-outline">API</div>
-                                            <div class="badge badge-outline">Backend</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!--WIP-->
-                    <div class="lg:mr-5 lg:mt-5 mt-5 flex justify-center items-right">
-                        <a href="#">
-                            <div class="card w-96 h-64 bg-base-100 shadow-xl image-full hover:w-120 hover:h-80 transition-all duration-300">
-                                <figure><img src="/assets/frog3.png" alt="Future Project Preview" class="hover:scale-105 transition-transform duration-300"></figure>
-                                <div class="card-body">
-                                    <h2 class="card-title">Future Project</h2>
-                                    <p>Stay tuned for upcoming developments</p>
-                                    <div class="card-actions flex justify-between">
-                                        <div>
-                                            <div class="badge badge-neutral">Coming Soon</div>
-                                            <div class="badge badge-outline">TBA</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                                         <!-- DatBase Project -->
+                     <div class="lg:mr-5 lg:mt-8 mt-5 flex justify-center items-center">
+                         <div class="card w-full max-w-4xl bg-gradient-to-r from-green-50 to-blue-50 shadow-2xl border-0 overflow-hidden">
+                             <div class="card-body p-0">
+                                 <div class="md:flex">
+                                     <div class="md:w-2/3 p-8">
+                                         <div class="flex items-center mb-4">
+                                             <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                                                 <i class="bi bi-database text-2xl text-white"></i>
+                                             </div>
+                                             <div>
+                                                 <h2 class="card-title text-3xl text-gray-800">DatBase</h2>
+                                                 <p class="text-green-600 font-medium">SQLite Clone</p>
+                                             </div>
+                                         </div>
+                                         <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                                             A custom SQLite3-based database implementation written from scratch in C. 
+                                             Built to understand database internals and learn low-level systems programming.
+                                         </p>
+                                         
+                                         <div class="flex flex-wrap gap-2 mb-6">
+                                             <span class="badge badge-primary">C</span>
+                                             <span class="badge badge-secondary">Database</span>
+                                             <span class="badge badge-accent">SQLite</span>
+                                             <span class="badge badge-outline">Systems Programming</span>
+                                             <span class="badge badge-outline">Low-level</span>
+                                         </div>
+                                         
+                                         <div class="flex space-x-4">
+                                             <a href="https://github.com/dockerhopper/DatBase" target="_blank" 
+                                                class="btn btn-primary hover:scale-105 transition-transform duration-300">
+                                                 <i class="bi bi-github mr-2"></i>View on GitHub
+                                             </a>
+                                             <a href="database.html" class="btn btn-outline hover:scale-105 transition-transform duration-300">
+                                                 Learn More
+                                             </a>
+                                         </div>
+                                     </div>
+                                     
+                                     <div class="md:w-1/3 bg-gradient-to-br from-green-600 to-blue-600 p-8 flex items-center justify-center text-white">
+                                         <div class="text-center">
+                                             <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                 <i class="bi bi-database text-3xl"></i>
+                                             </div>
+                                             <h4 class="text-xl font-semibold mb-2">Database Engine</h4>
+                                             <p class="text-green-100 text-sm">Built from the ground up in C</p>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
 
                     <!--Buttons-->
                     <div class="container flex justify-center items-center mt-10 md:mb-10 lg:w-auto">
@@ -212,7 +258,7 @@
                                     <h3 class="text-lg font-medium mb-4">Contact</h3>
                                     <p class="text-sm">Feel free to reach out for collaborations or opportunities</p>
                                     <div class="mt-4 space-y-2">
-                                        <a href="mailto:bransonancrawford@gmail.com" class="block text-sm hover:text-customRed">
+                                        <a href="mailto:bransonancrawford@gmail.com">
                                             <i class="bi bi-envelope mr-2"></i>Email
                                         </a>
                                         <a href="https://www.linkedin.com/in/branson-crawford-43651b333/" target="_blank" rel="noopener noreferrer" class="block text-sm hover:text-customRed">
@@ -251,12 +297,45 @@
             </div>
         </div>
     </div>
+
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <div class="relative group">
+            <button id="fab-main" class="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center">
+                <i class="bi bi-plus text-2xl"></i>
+            </button>
+            
+            <!-- FAB Menu Items -->
+            <div class="absolute bottom-20 right-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 space-y-3">
+                                 <a href="dockerkilo.html" class="flex items-center bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105">
+                     <i class="bi bi-code-slash mr-2 text-blue-600"></i>
+                     <span>DockerKilo</span>
+                 </a>
+                 <a href="database.html" class="flex items-center bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105">
+                     <i class="bi bi-database mr-2 text-green-600"></i>
+                     <span>DatBase</span>
+                 </a>
+                <a href="projects.html" class="flex items-center bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105">
+                    <i class="bi bi-folder mr-2 text-purple-600"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="https://github.com/dockerhopper" target="_blank" class="flex items-center bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105">
+                    <i class="bi bi-github mr-2 text-gray-800"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Causing the dual scrolling bug, not the biggest fan but only way I figured to add mobile menu functionality.-->
     <!-- Mobile Navigation Menu -->
     <div class="lg:hidden fixed top-0 right-0 p-4 z-50">
         <button id="mobile-menu-button" class="text-2xl hover:text-customRed">
             <i class="bi bi-list"></i>
         </button>
     </div>
+    
     <div id="mobile-menu" class="lg:hidden fixed top-0 right-0 w-64 h-full bg-base-100 shadow-lg transform translate-x-full transition-transform duration-300 z-40">
         <div class="p-4">
             <button id="close-menu" class="absolute top-4 right-4 text-2xl hover:text-customRed">
@@ -269,6 +348,15 @@
                 <li class="hover:text-customRed">
                     <a href="projects.html" class="block w-full">Projects</a>
                 </li>
+                                 <li class="hover:text-customRed">
+                     <a href="dockerkilo.html" class="block w-full">DockerKilo</a>
+                 </li>
+                 <li class="hover:text-customRed">
+                     <a href="database.html" class="block w-full">DatBase</a>
+                 </li>
+                 <li class="hover:text-customRed">
+                     <a href="quackdown.html" class="block w-full">Quackdown</a>
+                 </li>
                 <li class="hover:text-customRed">
                     <a href="blog.html" class="block w-full">Blog</a>
                 </li>
@@ -306,6 +394,274 @@
                 mobileMenu.classList.add('translate-x-full');
             }
         });
+
+        // Enhanced page animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add page transition class
+            document.body.classList.add('page-transition');
+            
+            // Remove transition class after page loads
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 100);
+
+            // Animate elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards and sections
+            const animatedElements = document.querySelectorAll('.card, .card-body, h1, h2, h3, p');
+            animatedElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `all 0.6s ease-out ${index * 0.1}s`;
+                observer.observe(el);
+            });
+
+            // Add floating animation to specific elements
+            const floatingElements = document.querySelectorAll('h1, .card-title');
+            floatingElements.forEach(el => {
+                el.classList.add('floating');
+            });
+
+            // Enhanced hover effects for cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) rotateX(2deg) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) rotateX(0) scale(1)';
+                });
+            });
+
+            // Add particle background effect
+            createParticles();
+        });
+
+        // Particle background effect
+        function createParticles() {
+            const particlesContainer = document.createElement('div');
+            particlesContainer.className = 'particles';
+            document.body.appendChild(particlesContainer);
+
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced theme toggle with animation
+        const themeToggle = document.querySelector('.theme-controller');
+        if (themeToggle) {
+            themeToggle.addEventListener('change', function() {
+                document.body.style.transition = 'all 0.3s ease';
+                if (this.checked) {
+                    document.body.classList.add('theme-transitioning');
+                    setTimeout(() => {
+                        document.body.classList.remove('theme-transitioning');
+                    }, 300);
+                }
+            });
+        }
+
+        // Add typing effect to the main title
+        function typeWriter(element, text, speed = 1000) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Initialize typing effect after page load
+        setTimeout(() => {
+            const mainTitle = document.querySelector('h1');
+            if (mainTitle) {
+                const originalText = mainTitle.textContent;
+                typeWriter(mainTitle, originalText, 150);
+            }
+        }, 1000);
+
+        // Add parallax effect to background elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.card, .floating');
+            
+            parallaxElements.forEach((el, index) => {
+                const speed = 0.5 + (index * 0.1);
+                const yPos = -(scrolled * speed);
+                el.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+
+        // Enhanced mobile menu with animations
+        const mobileMenuItems = document.querySelectorAll('#mobile-menu li');
+        mobileMenuItems.forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-20px)';
+            item.style.transition = `all 0.3s ease ${index * 0.1}s`;
+        });
+
+        function animateMobileMenu() {
+            mobileMenuItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, index * 100);
+            });
+        }
+
+        mobileMenuButton.addEventListener('click', animateMobileMenu);
+
+        // Floating Action Button functionality
+        const fabMain = document.getElementById('fab-main');
+        const fabMenu = fabMain?.parentElement?.querySelector('.group-hover\\:opacity-100');
+        
+        if (fabMain && fabMenu) {
+            // Toggle FAB menu on click for mobile
+            fabMain.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    fabMenu.classList.toggle('opacity-100');
+                    fabMenu.classList.toggle('invisible');
+                }
+            });
+
+            // Close FAB menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!fabMain.contains(e.target) && !fabMenu.contains(e.target)) {
+                    fabMenu.classList.add('opacity-0', 'invisible');
+                }
+            });
+        }
+
+        // Add scroll-triggered animations
+        let scrollCount = 0;
+        window.addEventListener('scroll', function() {
+            scrollCount++;
+            if (scrollCount % 10 === 0) {
+                // Add subtle parallax effect to background elements
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.card, .floating');
+                
+                parallaxElements.forEach((el, index) => {
+                    const speed = 0.1 + (index * 0.05);
+                    const yPos = -(scrolled * speed);
+                    el.style.transform = `translateY(${yPos}px)`;
+                });
+            }
+        });
+
+        // Add typing effect to project descriptions
+        function animateText(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Animate project descriptions on scroll
+        const projectDescriptions = document.querySelectorAll('.card-body p');
+        const textObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.animated) {
+                    const originalText = entry.target.textContent;
+                    entry.target.dataset.animated = 'true';
+                    animateText(entry.target, originalText, 30);
+                }
+            });
+        });
+
+        projectDescriptions.forEach(desc => textObserver.observe(desc));
+
+        // Add confetti effect on special interactions
+        function createConfetti() {
+            const colors = ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe'];
+            const confettiCount = 50;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.top = '-10px';
+                confetti.style.borderRadius = '50%';
+                confetti.style.pointerEvents = 'none';
+                confetti.style.zIndex = '9999';
+                confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+                
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+        }
+
+        // Add confetti on DockerKilo card hover
+        const dockerKiloCard = document.querySelector('.card:has(.card-title:contains("DockerKilo"))');
+        if (dockerKiloCard) {
+            dockerKiloCard.addEventListener('mouseenter', createConfetti);
+        }
+
+        // Add CSS animation for confetti
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
