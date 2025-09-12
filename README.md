@@ -1,6 +1,6 @@
-# Branson Crawford's Portfolio Website
+# My Portfolio!!! :)
 
-A modern, interactive portfolio website showcasing my projects and skills, featuring the DockerKilo text editor project.
+A modern, interactive portfolio website showcasing my projects and skills, featuring sum cool stuff.
 
 ##  Features
 
@@ -101,20 +101,12 @@ npm run build
 - Update gradient definitions
 - Adjust dark/light mode colors
 
-## 🔒 Browser Support
-
-- **Modern Browsers**: Chrome 80+, Firefox 75+, Safari 13+
-- **Mobile Browsers**: iOS Safari 13+, Chrome Mobile 80+
-- **Fallbacks**: Graceful degradation for older browsers
-
 ## 📈 Future Enhancements
 
 - [ ] Blog system integration
 - [ ] Contact form with backend
 - [ ] Project filtering and search
 - [ ] Dark mode persistence
-- [ ] Performance analytics
-- [ ] SEO optimization
 
 ##  Contributing
 
