@@ -11,12 +11,6 @@ A modern, interactive portfolio website showcasing my projects and skills, featu
 - **Particle Background Effects**: Dynamic floating particles for visual appeal
 - **3D Card Animations**: Hover effects with transform and shadow animations
 
-### DockerKilo Integration
-- **Featured Project Showcase**: Prominent display of the DockerKilo text editor
-- **Dedicated Project Page**: Comprehensive project details at `/dockerkilo.html`
-- **GitHub Integration**: Direct links to the [DockerKilo repository](https://github.com/dockerhopper/dockerKilo)
-- **Interactive Demo**: Terminal-style code preview with syntax highlighting
-
 ### Enhanced User Experience
 - **Floating Action Button (FAB)**: Quick access to key pages and projects
 - **Scroll Animations**: Elements animate in as they come into view
@@ -31,7 +25,6 @@ A modern, interactive portfolio website showcasing my projects and skills, featu
 - **Icons**: Bootstrap Icons
 - **Animations**: CSS3 Animations, JavaScript Intersection Observer
 - **Build Tool**: Vite
-- **Deployment**: Static hosting ready
 
 ##  Project Structure
 
@@ -141,4 +134,4 @@ However, you probably won't want to as it is a bloated mess from an amatuer web 
 
 ---
 
-Built with ❤️ and lots of coffee ☕ by Branson Crawford
+Built with and lots of coffee ☕ by Branson Crawford
