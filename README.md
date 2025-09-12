@@ -2,7 +2,7 @@
 
 A modern, interactive portfolio website showcasing my projects and skills, featuring the DockerKilo text editor project.
 
-## 🚀 Features
+##  Features
 
 ### Core Website
 - **Responsive Design**: Mobile-first approach with Tailwind CSS and DaisyUI
@@ -24,7 +24,7 @@ A modern, interactive portfolio website showcasing my projects and skills, featu
 - **Confetti Effects**: Celebratory animations on special interactions
 - **Parallax Scrolling**: Subtle depth effects during page scroll
 
-## 🛠️ Technology Stack
+## 🛠️Technology Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Styling**: Tailwind CSS, DaisyUI
@@ -33,7 +33,7 @@ A modern, interactive portfolio website showcasing my projects and skills, featu
 - **Build Tool**: Vite
 - **Deployment**: Static hosting ready
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 myproject2/
@@ -48,7 +48,7 @@ myproject2/
 └── README.md              # This file
 ```
 
-## 🎨 Design Features
+##  Design Features
 
 ### Color Scheme
 - **Primary**: Blue gradient (#667eea to #764ba2)
@@ -67,7 +67,7 @@ myproject2/
 - **Scroll Triggers**: Intersection Observer for performance
 - **Micro-interactions**: Button hover states and form feedback
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Modern web browser with ES6+ support
@@ -84,14 +84,14 @@ myproject2/
 npm run build
 ```
 
-## 📱 Responsive Design
+##  Responsive Design
 
 - **Mobile First**: Optimized for small screens
 - **Tablet**: Adaptive layouts for medium screens
 - **Desktop**: Full-featured experience with hover effects
 - **Touch Friendly**: Optimized for touch devices
 
-## 🔧 Customization
+##  Customization
 
 ### Adding New Projects
 1. Update `projects.html` with new project cards
@@ -108,37 +108,6 @@ npm run build
 - Update gradient definitions
 - Adjust dark/light mode colors
 
-## 🌟 DockerKilo Project Details
-
-### What is DockerKilo?
-DockerKilo is a revolutionary fork of the Kilo text editor with multi-buffer support and advanced file management. Built in C, it features:
-
-- **10 simultaneous buffers** with intuitive navigation
-- **Advanced syntax highlighting** for multiple languages
-- **Efficient rendering** with tab expansion and line wrapping
-- **Powerful search** with real-time highlighting
-- **Terminal-based interface** for developers
-
-### Key Features
-- Multi-buffer management (Ctrl-B, Ctrl-N, Ctrl-P)
-- Syntax highlighting for C/C++, Python, and more
-- Efficient memory management and rendering
-- Cross-platform compatibility (Unix/Linux)
-- BSD 2-Clause license
-
-### Technical Implementation
-- Written in pure C for performance
-- POSIX-compliant system calls
-- Dynamic memory allocation
-- Efficient text processing algorithms
-
-## 🎯 Performance Optimizations
-
-- **Lazy Loading**: Images and content load as needed
-- **CSS Optimization**: Minimal CSS with utility classes
-- **JavaScript Efficiency**: Intersection Observer for scroll events
-- **Asset Optimization**: Compressed images and minified code
-
 ## 🔒 Browser Support
 
 - **Modern Browsers**: Chrome 80+, Firefox 75+, Safari 13+
@@ -154,31 +123,21 @@ DockerKilo is a revolutionary fork of the Kilo text editor with multi-buffer sup
 - [ ] Performance analytics
 - [ ] SEO optimization
 
-## 🤝 Contributing
+##  Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+- Please don't contribute, I won't be able to review it!
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
+I give full permission to copy this webiste and modify to use as your own webiste
+However, you probably won't want to as it is a bloated mess from an amatuer web programmer!
 
-## 👨‍💻 Author
+##  Author
 
 **Branson Crawford**
 - GitHub: [@dockerhopper](https://github.com/dockerhopper)
 - LinkedIn: [Branson Crawford](https://www.linkedin.com/in/branson-crawford-43651b333/)
-- Email: bransonancrawford@gmail.com
-
-## 🙏 Acknowledgments
-
-- **Kilo Editor**: Original text editor by Salvatore Sanfilippo (antirez)
-- **Tailwind CSS**: Utility-first CSS framework
-- **DaisyUI**: Component library for Tailwind CSS
-- **Bootstrap Icons**: Icon library for consistent design
 
 ---
 
