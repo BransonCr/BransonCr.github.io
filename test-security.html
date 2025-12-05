@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Test Page</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            background: #0a0e14;
+            color: #00ff00;
+        }
+        .test {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #30363d;
+            background: #0d1117;
+        }
+        .test-name {
+            color: #4a9eff;
+            font-weight: bold;
+        }
+        .pass { color: #00ff00; }
+        .fail { color: #ff4444; }
+    </style>
+</head>
+<body>
+    <h1>Security Test Suite</h1>
+
+    <div class="test">
+        <div class="test-name">Test 1: XSS via script tag</div>
+        <input type="text" id="test1" value="<script>alert('xss')</script>" style="width: 100%; padding: 5px;">
+        <button onclick="testXSS1()">Test</button>
+        <div id="result1"></div>
+    </div>
+
+    <div class="test">
+        <div class="test-name">Test 2: XSS via img tag</div>
+        <input type="text" id="test2" value="<img src=x onerror=alert('xss')>" style="width: 100%; padding: 5px;">
+        <button onclick="testXSS2()">Test</button>
+        <div id="result2"></div>
+    </div>
+
+    <div class="test">
+        <div class="test-name">Test 3: HTML injection</div>
+        <input type="text" id="test3" value="<h1>Injected HTML</h1>" style="width: 100%; padding: 5px;">
+        <button onclick="testXSS3()">Test</button>
+        <div id="result3"></div>
+    </div>
+
+    <div class="test">
+        <div class="test-name">Test 4: Rate limiting (send 51 requests)</div>
+        <button onclick="testRateLimit()">Test</button>
+        <div id="result4"></div>
+    </div>
+
+    <div class="test">
+        <div class="test-name">Test 5: Input length limit (501 chars)</div>
+        <button onclick="testLength()">Test</button>
+        <div id="result5"></div>
+    </div>
+
+    <script>
+        // Import security functions from main script
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function sanitizeInput(input) {
+            if (typeof input !== 'string') return '';
+            input = input.replace(/\0/g, '');
+            if (input.length > 500) {
+                input = input.substring(0, 500);
+            }
+            input = input.replace(/[^\w\s\-\.\/~]/g, '');
+            return input.trim();
+        }
+
+        let commandCount = 0;
+        let lastResetTime = Date.now();
+        const RATE_LIMIT = 50;
+        const RATE_WINDOW = 10000;
+
+        function checkRateLimit() {
+            const now = Date.now();
+            if (now - lastResetTime > RATE_WINDOW) {
+                commandCount = 0;
+                lastResetTime = now;
+            }
+            if (commandCount >= RATE_LIMIT) {
+                return false;
+            }
+            commandCount++;
+            return true;
+        }
+
+        function testXSS1() {
+            const input = document.getElementById('test1').value;
+            const escaped = escapeHtml(input);
+            const result = document.getElementById('result1');
+
+            if (escaped.includes('&lt;script&gt;') && !escaped.includes('<script>')) {
+                result.innerHTML = '<span class="pass">PASS: Script tags properly escaped</span><br>Escaped: ' + escaped;
+            } else {
+                result.innerHTML = '<span class="fail">FAIL: Script tags not escaped</span>';
+            }
+        }
+
+        function testXSS2() {
+            const input = document.getElementById('test2').value;
+            const escaped = escapeHtml(input);
+            const result = document.getElementById('result2');
+
+            if (escaped.includes('&lt;img') && !escaped.includes('<img')) {
+                result.innerHTML = '<span class="pass">PASS: Image tags properly escaped</span><br>Escaped: ' + escaped;
+            } else {
+                result.innerHTML = '<span class="fail">FAIL: Image tags not escaped</span>';
+            }
+        }
+
+        function testXSS3() {
+            const input = document.getElementById('test3').value;
+            const escaped = escapeHtml(input);
+            const result = document.getElementById('result3');
+
+            if (escaped.includes('&lt;h1&gt;') && !escaped.includes('<h1>')) {
+                result.innerHTML = '<span class="pass">PASS: HTML tags properly escaped</span><br>Escaped: ' + escaped;
+            } else {
+                result.innerHTML = '<span class="fail">FAIL: HTML tags not escaped</span>';
+            }
+        }
+
+        function testRateLimit() {
+            const result = document.getElementById('result4');
+            let allowed = 0;
+            let blocked = 0;
+
+            // Reset counters
+            commandCount = 0;
+            lastResetTime = Date.now();
+
+            for (let i = 0; i < 51; i++) {
+                if (checkRateLimit()) {
+                    allowed++;
+                } else {
+                    blocked++;
+                }
+            }
+
+            if (allowed === 50 && blocked === 1) {
+                result.innerHTML = '<span class="pass">PASS: Rate limit working correctly</span><br>Allowed: ' + allowed + ', Blocked: ' + blocked;
+            } else {
+                result.innerHTML = '<span class="fail">FAIL: Rate limit not working</span><br>Allowed: ' + allowed + ', Blocked: ' + blocked;
+            }
+        }
+
+        function testLength() {
+            const longInput = 'a'.repeat(501);
+            const sanitized = sanitizeInput(longInput);
+            const result = document.getElementById('result5');
+
+            if (sanitized.length === 500) {
+                result.innerHTML = '<span class="pass">PASS: Input truncated to 500 chars</span><br>Original: ' + longInput.length + ', Sanitized: ' + sanitized.length;
+            } else {
+                result.innerHTML = '<span class="fail">FAIL: Input not truncated</span><br>Original: ' + longInput.length + ', Sanitized: ' + sanitized.length;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod:*)",
+      "Bash(php build-static.php:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
