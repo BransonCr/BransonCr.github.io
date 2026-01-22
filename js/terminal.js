@@ -260,18 +260,18 @@ SHELL:       /bin/bash`;
     },
 
     neofetch: () => {
-        return `      ___           bransoncr@portfolio<br>
-     (.. |          ─────────────────────<br>
-     (<> |          OS: Portfolio Linux x86_64<br>
-    / __  \\         Host: GitHub Pages<br>
-   ( /  \\ /|        Kernel: 6.1.0-branson<br>
-  _/\\ __)/_)        Uptime: ${Math.floor(Date.now() / 86400000)} days<br>
-  \\/-____\\/         Shell: bash 5.2.15<br>
-                    Resolution: 1920x1080<br>
-                    DE: Terminal UI<br>
-                    Theme: Terminal-Green<br>
-                    CPU: Intel i7-Networking<br>
-                    Memory: 0x${Math.floor(Math.random() * 16777215).toString(16)}`;
+        return `   /\\_/\\           bransoncr@portfolio<br>
+  ( o.o )          ─────────────────────<br>
+   > ^ <           OS: Portfolio Linux x86_64<br>
+  /|   |\\          Host: GitHub Pages<br>
+ (_|   |_)         Kernel: 6.1.0-branson<br>
+                   Uptime: ${Math.floor(Date.now() / 86400000)} days<br>
+                   Shell: bash 5.2.15<br>
+                   Resolution: 1920x1080<br>
+                   DE: Terminal UI<br>
+                   Theme: Terminal-Green<br>
+                   CPU: Intel i7-Networking<br>
+                   Memory: 0x${Math.floor(Math.random() * 16777215).toString(16)}`;
     },
 
     gui: () => {
