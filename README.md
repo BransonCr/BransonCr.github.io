@@ -1,94 +1,111 @@
-# Portfolio v2
+# Portfolio v3
 
-Terminal-themed personal portfolio website with file system interface. Built with PHP for local development and static HTML/CSS/JS for GitHub Pages deployment.
+Personal portfolio website with dual interface: Terminal CLI and GUI mode. Built with vanilla HTML/CSS/JS for GitHub Pages deployment.
 
 ## Overview
 
-Minimalistic portfolio site mimicking a Unix terminal and file system.
+Portfolio site with two interaction modes:
+- **Terminal Mode**: Unix-like terminal with file system interface and command line
+- **GUI Mode**: Modern graphical interface with mouse navigation
 
+Switch between modes using the toggle buttons in the top-right corner.
 
 ## Tech Stack
 
-- PHP (local development)
-- HTML/CSS/JS (deployment)
-- JSON (project data storage)
-- Pure vanilla JavaScript (no frameworks)
+- HTML5 / CSS3 / JavaScript (ES6+)
+- No frameworks - pure vanilla implementation
+- JSON for project data storage
+- LocalStorage for mode preference persistence
 
 ## Local Development
 
-Run with PHP built-in server:
+Open `index.html` directly in a browser, or serve with any static file server:
 
 ```bash
-php -S localhost:8080
+# Using Python
+python -m http.server 8080
+
+# Using Node.js
+npx serve .
 ```
 
 Visit `http://localhost:8080` in browser.
 
-## Available Commands
+## Features
 
-Terminal supports the following commands:
+### Terminal Mode
+- Unix-like file system navigation
+- Command history with arrow keys
+- Tab completion for directories
+- Clickable directory links
+- Commands: `help`, `ls`, `cd`, `cat`, `pwd`, `clear`, `whoami`, `neofetch`, `gui`
 
-- `help` - Display available commands
-- `ls` - List files and directories
-- `cd [dir]` - Change directory
-- `cat [file]` - Display file contents
-- `pwd` - Print working directory
-- `clear` - Clear terminal
-- `whoami` - Display user information
-- `neofetch` - Display system information
+### GUI Mode
+- Modern card-based layout
+- Responsive design for all screen sizes
+- Sections: About, Projects, Skills, Contact
+- Interactive hover effects
+- Skill level visualization
 
 ## Project Structure
 
 ```
-websitev2/
-├── index.php          # Main PHP file with embedded HTML
-├── style.css          # Terminal styling and theme
-├── script.js          # File system logic and command handling
-├── projects.json      # Project data storage
-└── README.md          # This file
+/
+├── index.html           # Main entry point
+├── css/
+│   ├── main.css         # Shared styles and variables
+│   ├── terminal.css     # Terminal mode styles
+│   └── gui.css          # GUI mode styles
+├── js/
+│   ├── main.js          # Shared data and mode switching
+│   ├── terminal.js      # Terminal logic and commands
+│   └── gui.js           # GUI rendering and interactions
+├── data/
+│   └── projects.json    # Project data
+└── README.md
 ```
 
 ## Customization
 
 ### Colors
 
-Edit CSS variables in `style.css`:
+Edit CSS variables in `css/main.css`:
 
 ```css
 :root {
     --bg-primary: #0a0e14;
     --text-primary: #00ff00;
     --text-blue: #4a9eff;
+    --accent: #ff6b00;
 }
 ```
 
-### File System Structure
+### Projects
 
-Modify `fileSystem` object in `script.js` to add directories or files.
+Update `data/projects.json` with your project information.
 
-### ASCII Art
+### Skills & Personal Info
 
-Update header in `index.php` to customize boot sequence and header art. Don't look at neofetch because I spect ~30 mins trying to get it to work lol
+Modify the `skillsData` and `personalInfo` objects in `js/main.js`.
+
+### File System
+
+Modify the `fileSystem` object in `js/terminal.js` to customize terminal directories and files.
 
 ## Security
 
 Basic web hardening implemented:
-- CSP headers and meta tags
 - XSS prevention with input sanitization
 - HTML escaping for all user input
 - Client-side rate limiting (50 commands/10s)
-- Clickjacking protection
-- MIME sniffing prevention
-
-See SECURITY.md for detailed security documentation.
-
+- Security meta tags (X-Frame-Options, X-Content-Type-Options, etc.)
 
 ## License
 
-MIT (FREE USE BABY!)
+MIT
 
 ## Contact
-If you like this and want to talk to me about stuff, contact me here
+
 Branson Crawford
 - Email: bransonancrawford@gmail.com
 - GitHub: github.com/BransonCr

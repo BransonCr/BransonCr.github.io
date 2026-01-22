@@ -1,0 +1,190 @@
+/* Main CSS - Shared variables and base styles */
+:root {
+    --bg-primary: #0a0e14;
+    --bg-secondary: #0d1117;
+    --bg-card: #161b22;
+    --text-primary: #00ff00;
+    --text-secondary: #00aa00;
+    --text-blue: #4a9eff;
+    --text-gray: #6b7280;
+    --text-white: #c9d1d9;
+    --border-color: #30363d;
+    --accent: #ff6b00;
+    --accent-hover: #ff8533;
+    --success: #00ff00;
+    --error: #ff4444;
+    --warning: #ffaa00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+    background: var(--bg-primary);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mode toggle styles */
+.mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 8px;
+    background: var(--bg-secondary);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.mode-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-gray);
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.mode-btn:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.mode-btn.active {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border-color: var(--text-primary);
+}
+
+/* Header styles */
+.header {
+    margin-bottom: 20px;
+}
+
+.ascii-art {
+    color: var(--text-primary);
+    font-size: 11px;
+    line-height: 1.2;
+    overflow-x: auto;
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--text-gray);
+}
+
+.footer-item {
+    padding: 0 10px;
+}
+
+/* Link styles */
+.link {
+    color: var(--text-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: var(--accent);
+}
+
+/* Tech tag styles */
+.tech-tag {
+    display: inline-block;
+    background: var(--border-color);
+    color: var(--text-primary);
+    padding: 2px 8px;
+    margin: 2px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+/* Color utility classes */
+.green { color: var(--text-primary); }
+.blue { color: var(--text-blue); }
+.gray { color: var(--text-gray); }
+.white { color: var(--text-white); }
+.accent { color: var(--accent); }
+.error { color: var(--error); }
+.success { color: var(--success); }
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .ascii-art {
+        font-size: 8px;
+    }
+
+    .mode-toggle {
+        top: 10px;
+        right: 10px;
+    }
+
+    .mode-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+}
+
+/* Hide/show modes */
+.terminal-mode { display: none; }
+.gui-mode { display: none; }
+
+body.mode-terminal .terminal-mode { display: flex; }
+body.mode-gui .gui-mode { display: block; }

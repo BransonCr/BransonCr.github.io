@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "name": "MDS Application Management System",
+      "type": "web",
+      "description": "Full-stack admissions platform for UBC's MDS program. Features RBAC with multiple permission levels, normalized PostgreSQL schema adhering to 3NF principles, admin dashboard with CSV/Excel export, and advanced SQL-optimized filtering.",
+      "tech": ["Python", "Flask", "PostgreSQL", "Tailwind CSS", "bcrypt"],
+      "github": null,
+      "status": "active",
+      "date": "Nov 2025 - Present"
+    },
+    {
+      "name": "E-Commerce Web Application",
+      "type": "web",
+      "description": "Enterprise e-commerce platform with product catalog, persistent shopping cart, secure authentication using BCrypt, admin dashboard with real-time sales analytics, BLOB storage for images, and ACID-compliant transactions with Docker deployment.",
+      "tech": ["Java", "JDBC", "Docker", "SQL Server", "JSP"],
+      "github": "https://github.com/BransonCr/DatBase",
+      "status": "completed",
+      "date": "Oct 2025 - Nov 2025"
+    },
+    {
+      "name": "DatBase: SQLite Clone",
+      "type": "systems",
+      "description": "RDBMS implementation in C with self-balancing B+ tree indexing (O(log n) search), SQLite-compatible binary format, SQL parser with recursive descent and AST generation, and write-ahead logging (WAL) for ACID compliance and crash recovery.",
+      "tech": ["C", "B-tree", "WAL", "SQL Parser"],
+      "github": "https://github.com/BransonCr/DatBase",
+      "status": "completed",
+      "date": "Aug 2025 - Sep 2025"
+    },
+    {
+      "name": "DockerKilo: Text Editor",
+      "type": "systems",
+      "description": "Extended Kilo editor with gap buffer data structure for O(1) insertion/deletion, rope-based text manipulation for large files, and intelligent memory pooling. Achieved 40% performance improvement through profiling and optimization.",
+      "tech": ["C", "Terminal", "Gap Buffer", "Memory Optimization"],
+      "github": "https://github.com/BransonCr/dockerKilo",
+      "status": "completed",
+      "date": "May 2025 - Jul 2025"
+    },
+    {
+      "name": "Network Chatroom",
+      "type": "networking",
+      "description": "Client-server chat application using Java socket programming with TCP/IP protocol. Features multithreaded server with thread pool executor pattern, non-blocking I/O, connection lifecycle management, and graceful error handling.",
+      "tech": ["Java", "TCP/IP", "Sockets", "Multithreading"],
+      "github": null,
+      "status": "completed",
+      "date": "Sep 2025 - Dec 2025"
+    }
+  ]
+}

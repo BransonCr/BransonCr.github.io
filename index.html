@@ -1,30 +1,40 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://localhost:8085/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bransoncr@localhost:~$</title>
-    <meta name="description" content="Branson Crawford - Computer Science major focused on systems programming and networking">
+    <title>Branson Crawford | Portfolio</title>
+    <meta name="description" content="Branson Crawford - Computer Science major focused on systems programming, networking, and database design">
 
-    <!-- Security meta tags for static deployment -->
+    <!-- Security meta tags -->
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: https:; font-src &#39;self&#39;; connect-src &#39;self&#39;; frame-ancestors &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;;">
 
-    <link rel="stylesheet" href="./index_files/style.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/terminal.css">
+    <link rel="stylesheet" href="css/gui.css">
 </head>
-<body>
-    <div class="container">
+<body class="mode-terminal">
+    <!-- Mode Toggle -->
+    <div class="mode-toggle">
+        <button class="mode-btn active" data-mode="terminal">Terminal</button>
+        <button class="mode-btn" data-mode="gui">GUI</button>
+    </div>
+
+    <!-- Terminal Mode -->
+    <div class="container terminal-mode">
         <div class="header">
-            <pre class="ascii-art">╔═══════════════════════════════════════════════════════════════════════════╗
-║  0x42 0x52 0x41 0x4E 0x53 0x4F 0x4E     [BRANSON.SYS v2.0]               ║
-║  ┌────────────────────────────────────────────────────────────────────┐  ║
-║  │ PROCESS: portfolio.exe          PID: 1337      PORT: 8080          │  ║
-║  │ STATUS: RUNNING                 MEM: 0x7FF8A000-0x7FF8FFFF         │  ║
-║  └────────────────────────────────────────────────────────────────────┘  ║
-╚═══════════════════════════════════════════════════════════════════════════╝
+            <pre class="ascii-art">
++===========================================================================+
+|  0x42 0x52 0x41 0x4E 0x53 0x4F 0x4E     [BRANSON.SYS v3.0]               |
+|  +----------------------------------------------------------------------+ |
+|  | PROCESS: portfolio.exe          PID: 1337      PORT: 8080           | |
+|  | STATUS: RUNNING                 MEM: 0x7FF8A000-0x7FF8FFFF          | |
+|  +----------------------------------------------------------------------+ |
++===========================================================================+
             </pre>
         </div>
 
@@ -42,32 +52,33 @@
                 <div class="welcome">
                     <span class="green">bransoncr@localhost</span>:<span class="blue">~</span>$ cat README.txt<br>
                     <div class="info-box">
-┌─────────────────────────────────────────────────────────────┐
-<br>│ BRANSON CRAWFORD     <t><t>                                       
-<br>│ Computer Science Major &amp; Mathematics Minor                  
-<br>│ University of British Columbia Okanagan                     
-<br>├─────────────────────────────────────────────────────────────┤
-<br>│ INTERESTS: Systems Programming │ Networking │ Database      
-<br>│ FOCUS: Low-level code, OS development, network protocols    
-<br>├─────────────────────────────────────────────────────────────┤
-<br>│ CONTACT:                                                    
-<br>│   ├─ EMAIL:    bransonancrawford@gmail.com                 
-<br>│   ├─ GITHUB:   github.com/BransonCr                        
-<br>│   └─ LINKEDIN: linkedin.com/in/branson-crawford-43651b333  <br>│
-<br>└─────────────────────────────────────────────────────────────┘
-                    </t></t></div>
++-------------------------------------------------------------+
+| BRANSON CRAWFORD                                            |
+| Computer Science Major & Mathematics Minor                  |
+| University of British Columbia Okanagan                     |
+| 3rd Year | GPA: 4.00/4.0 | Dean's Scholar (2024-25)         |
++-------------------------------------------------------------+
+| INTERESTS: Systems Programming | Networking | Databases     |
+| FOCUS: Low-level code, database internals, network protocols|
++-------------------------------------------------------------+
+| CONTACT:                                                    |
+|   EMAIL:    bransonancrawford@gmail.com                     |
+|   GITHUB:   github.com/BransonCr                            |
+|   LINKEDIN: linkedin.com/in/branson-crawford-43651b333      |
++-------------------------------------------------------------+
+                    </div>
                     <br>
                     <span class="green">bransoncr@localhost</span>:<span class="blue">~</span>$ ls -la<br>
                     <div class="file-list">
-drwxr-xr-x  5 bransoncr users  4096 Dec  4 2024 .<br>
-drwxr-xr-x 24 root      root   4096 Dec  1 2024 ..<br>
--rw-r--r--  1 bransoncr users   220 Dec  1 2024 README.txt<br>
-drwxr-xr-x  2 bransoncr users  4096 Dec  4 2024 <span class="dir-link" data-dir="projects">projects/</span><br>
-drwxr-xr-x  2 bransoncr users  4096 Dec  4 2024 <span class="dir-link" data-dir="skills">skills/</span><br>
-drwxr-xr-x  2 bransoncr users  4096 Dec  4 2024 <span class="dir-link" data-dir="contact">contact/</span><br>
+drwxr-xr-x  5 bransoncr users  4096 Jan 21 2026 .<br>
+drwxr-xr-x 24 root      root   4096 Jan 21 2026 ..<br>
+-rw-r--r--  1 bransoncr users   512 Jan 21 2026 README.txt<br>
+drwxr-xr-x  2 bransoncr users  4096 Jan 21 2026 <span class="dir-link" data-dir="projects">projects/</span><br>
+drwxr-xr-x  2 bransoncr users  4096 Jan 21 2026 <span class="dir-link" data-dir="skills">skills/</span><br>
+drwxr-xr-x  2 bransoncr users  4096 Jan 21 2026 <span class="dir-link" data-dir="contact">contact/</span><br>
                     </div>
                     <br>
-                    <span class="comment">Type <span class="command">help</span> for available commands</span><br>
+                    <span class="comment">Type <span class="command">help</span> for available commands or click the GUI button to switch modes</span><br>
                     <br>
                 </div>
             </div>
@@ -76,27 +87,113 @@ drwxr-xr-x  2 bransoncr users  4096 Dec  4 2024 <span class="dir-link" data-dir=
                 <span class="prompt">
                     <span class="green">bransoncr@localhost</span>:<span class="blue">~</span>$
                 </span>
-                <input type="text" id="command-input" autocomplete="off" spellcheck="false" autofocus="">
+                <input type="text" id="command-input" autocomplete="off" spellcheck="false" autofocus>
             </div>
         </div>
 
         <div class="footer">
             <span class="footer-item">NET: 192.168.1.100:8080</span>
-            <span class="footer-item">│</span>
+            <span class="footer-item">|</span>
             <span class="footer-item">TX: 2.4KB/s</span>
-            <span class="footer-item">│</span>
+            <span class="footer-item">|</span>
             <span class="footer-item">RX: 1.8KB/s</span>
-            <span class="footer-item">│</span>
-            <span class="footer-item">UPTIME: 20426 days</span>
-            <span class="footer-item">│</span>
-            <span class="footer-item">MEM: 0x6c6e8</span>
+            <span class="footer-item">|</span>
+            <span class="footer-item">UPTIME: <span id="uptime"></span></span>
+            <span class="footer-item">|</span>
+            <span class="footer-item">MEM: 0x<span id="mem-addr"></span></span>
         </div>
     </div>
 
+    <!-- GUI Mode -->
+    <div class="gui-mode gui-container">
+        <nav class="gui-nav">
+            <button class="nav-btn active" data-section="about">About</button>
+            <button class="nav-btn" data-section="projects">Projects</button>
+            <button class="nav-btn" data-section="skills">Skills</button>
+            <button class="nav-btn" data-section="contact">Contact</button>
+        </nav>
+
+        <!-- About Section -->
+        <section id="section-about" class="gui-section active">
+            <div class="about-header">
+                <!-- Populated by JavaScript -->
+            </div>
+            <div class="about-content">
+                <div class="info-card">
+                    <h3>Education</h3>
+                    <p>
+                        <span class="highlight">University of British Columbia</span> - Okanagan Campus<br>
+                        Bachelor of Science in Computer Science<br>
+                        Minor in Mathematics<br><br>
+                        <strong>Dean's Scholar (2024-25)</strong> for Outstanding Academic Achievement
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h3>Research Experience</h3>
+                    <p>
+                        <span class="highlight">Undergraduate Research Assistant</span> at HCI Lab<br>
+                        Supervisor: Dr. Khalad Hasan<br><br>
+                        Conducting meta-analysis on human interaction with large curved displays, developing evaluation methodologies for assessing user interaction techniques.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h3>Work Experience</h3>
+                    <p>
+                        <span class="highlight">Software Developer</span> - UBC Master of Data Science<br>
+                        Architecting scalable web applications, designing normalized database schemas, achieving 52% performance improvements.<br><br>
+                        <span class="highlight">Software Developer</span> - UBCO Aerospace<br>
+                        Real-time vision processing, autonomous flight systems, web-based GUI development.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h3>Focus Areas</h3>
+                    <p>
+                        <span class="highlight">Systems Programming</span> - Building low-level tools and understanding software at the core.<br><br>
+                        <span class="highlight">Database Design</span> - RDBMS implementation, query optimization, B+ tree indexing.<br><br>
+                        <span class="highlight">Networking</span> - TCP/IP protocols, socket programming, client-server architecture.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="section-projects" class="gui-section">
+            <h2 style="color: var(--text-primary); margin-bottom: 24px; text-align: center;">Projects</h2>
+            <div id="projects-grid" class="projects-grid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="section-skills" class="gui-section">
+            <h2 style="color: var(--text-primary); margin-bottom: 24px; text-align: center;">Technical Skills</h2>
+            <div id="skills-container" class="skills-container">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="section-contact" class="gui-section">
+            <div id="contact-container" class="contact-container">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/gui.js"></script>
     <script>
-        const projects = [{"name":"DockerKilo","type":"systems","description":"Enhanced fork of Kilo text editor with multi-buffer support. Handles up to 10 files simultaneously in a single terminal session.","tech":["C","Terminal","Multi-buffer","Syntax-Highlighting"],"github":"https:\/\/github.com\/dockerhopper\/dockerKilo","status":"active"},{"name":"DatBase","type":"systems","description":"Custom SQLite3-based database implementation from scratch. Built to understand database internals and low-level systems programming.","tech":["C","Database","SQLite","File-Storage"],"github":"https:\/\/github.com\/dockerhopper\/DatBase","status":"active"}];
+        // Update footer stats
+        function updateFooter() {
+            const uptimeEl = document.getElementById('uptime');
+            const memEl = document.getElementById('mem-addr');
+            if (uptimeEl) uptimeEl.textContent = Math.floor(Date.now() / 86400000) + ' days';
+            if (memEl) memEl.textContent = Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+        }
+        updateFooter();
+        setInterval(updateFooter, 5000);
     </script>
-    <script src="./index_files/script.js.download"></script>
-
-
-</body></html>
+</body>
+</html>
