@@ -1,199 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Branson Crawford | Portfolio</title>
-    <meta name="description" content="Branson Crawford - Computer Science major focused on systems programming, networking, and database design">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branson Crawford</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <!-- Security meta tags -->
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    :root {
+      --bg:     #0f0f0f;
+      --border: #2a2a2a;
+      --text:   #e8e8e8;
+      --muted:  #666;
+      --accent: #c8a96e;
+      --mono:   'JetBrains Mono', monospace;
+    }
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/terminal.css">
-    <link rel="stylesheet" href="css/gui.css">
+    html { height: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--mono);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .bc-box {
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .bc-links {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+    }
+
+    h2 {
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .bc-tagline {
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .bc-text-link {
+      font-size: 0.85rem;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: color 0.15s;
+    }
+
+    .bc-text-link + .bc-text-link { margin-top: 0.5rem; }
+
+    .bc-text-link::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--border);
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: background 0.15s;
+    }
+
+    .bc-text-link:hover { color: var(--accent); }
+    .bc-text-link:hover::before { background: var(--accent); }
+
+    .bc-icon-links {
+      display: flex;
+      gap: 1.1rem;
+      align-items: center;
+    }
+
+    .bc-icon-link {
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      transition: color 0.15s;
+    }
+
+    .bc-icon-link:hover { color: var(--text); }
+
+    .bc-icon-link svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .bc-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .bc-tag {
+      font-size: 0.65rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.5rem;
+      letter-spacing: 0.04em;
+    }
+
+    .bc-footer {
+      font-size: 0.65rem;
+      color: var(--border);
+      letter-spacing: 0.06em;
+      margin-top: 0.75rem;
+    }
+  </style>
 </head>
-<body class="mode-terminal">
-    <!-- Mode Toggle -->
-    <div class="mode-toggle">
-        <button class="mode-btn active" data-mode="terminal">Terminal</button>
-        <button class="mode-btn" data-mode="gui">GUI</button>
+<body>
+  <div class="bc-box">
+
+    <div class="bc-links">
+      <h1>Branson Crawford</h1>
+      <p class="bc-tagline">Software Developer &middot; UBC Okanagan</p>
     </div>
 
-    <!-- Terminal Mode -->
-    <div class="container terminal-mode">
-        <div class="header">
-            <pre class="ascii-art">
-+===========================================================================+
-|  0x42 0x52 0x41 0x4E 0x53 0x4F 0x4E     [BRANSON.SYS v3.0]               |
-|  +----------------------------------------------------------------------+ |
-|  | PROCESS: portfolio.exe          PID: 1337      PORT: 8080           | |
-|  | STATUS: RUNNING                 MEM: 0x7FF8A000-0x7FF8FFFF          | |
-|  +----------------------------------------------------------------------+ |
-+===========================================================================+
-            </pre>
-        </div>
-
-        <div class="terminal">
-            <div class="terminal-output" id="output">
-                <div class="boot-sequence">
-                    <span class="timestamp">[0.000000]</span> Initializing kernel modules...<br>
-                    <span class="timestamp">[0.012847]</span> Loading network stack... OK<br>
-                    <span class="timestamp">[0.024531]</span> Mounting /home/bransoncr... OK<br>
-                    <span class="timestamp">[0.038942]</span> Starting portfolio service on port 8080...<br>
-                    <span class="timestamp">[0.045123]</span> System ready.<br>
-                    <br>
-                </div>
-
-                <div class="welcome">
-                    <span class="green">bransoncr@localhost</span>:<span class="blue">~</span>$ cat README.txt<br>
-                    <div class="info-box">
-+-------------------------------------------------------------+<br>
-| BRANSON CRAWFORD                                            |<br>
-| Computer Science Major & Mathematics Minor                  |<br>
-| University of British Columbia Okanagan                     |<br>
-| 3rd Year | GPA: 4.00/4.0 | Dean's Scholar (2024-25)         |<br>
-+-------------------------------------------------------------+<br>
-| INTERESTS: Systems Programming | Networking | Databases     |<br>
-| FOCUS: Low-level code, database internals, network protocols|<br>
-+-------------------------------------------------------------+<br>
-| CONTACT:                                                    |<br>
-|   EMAIL:    bransonancrawford@gmail.com                     |<br>
-|   GITHUB:   github.com/BransonCr                            |<br>
-|   LINKEDIN: linkedin.com/in/branson-crawford-43651b333      |<br>
-+-------------------------------------------------------------+<br>
-                    </div>
-                    <br>
-                    <span class="green">bransoncr@localhost</span>:<span class="blue">~</span>$ ls -la<br>
-                    <div class="file-list">
-drwxr-xr-x  5 bransoncr users  4096 Jan 21 2026 .<br>
-drwxr-xr-x 24 root      root   4096 Jan 21 2026 ..<br>
--rw-r--r--  1 bransoncr users   512 Jan 21 2026 README.txt<br>
-drwxr-xr-x  2 bransoncr users  4096 Jan 21 2026 <span class="dir-link" data-dir="projects">projects/</span><br>
-drwxr-xr-x  2 bransoncr users  4096 Jan 21 2026 <span class="dir-link" data-dir="skills">skills/</span><br>
-drwxr-xr-x  2 bransoncr users  4096 Jan 21 2026 <span class="dir-link" data-dir="contact">contact/</span><br>
-                    </div>
-                    <br>
-                    <span class="comment">Type <span class="command">help</span> for available commands or click the GUI button to switch modes</span><br>
-                    <br>
-                </div>
-            </div>
-
-            <div class="terminal-input">
-                <span class="prompt">
-                    <span class="green">bransoncr@localhost</span>:<span class="blue">~</span>$
-                </span>
-                <input type="text" id="command-input" autocomplete="off" spellcheck="false" autofocus>
-            </div>
-        </div>
-
-        <div class="footer">
-            <span class="footer-item">NET: 192.168.1.100:8080</span>
-            <span class="footer-item">|</span>
-            <span class="footer-item">TX: 2.4KB/s</span>
-            <span class="footer-item">|</span>
-            <span class="footer-item">RX: 1.8KB/s</span>
-            <span class="footer-item">|</span>
-            <span class="footer-item">UPTIME: <span id="uptime"></span></span>
-            <span class="footer-item">|</span>
-            <span class="footer-item">MEM: 0x<span id="mem-addr"></span></span>
-        </div>
+    <div class="bc-links">
+      <h2>Work</h2>
+      <a class="bc-text-link" href="https://github.com/bransonCr" target="_blank">github.com/bransonCr</a>
+      <a class="bc-text-link" href="mailto:B959+githubIO@pm.me" target="_blank">Send me an email for my Resume</a>
     </div>
 
-    <!-- GUI Mode -->
-    <div class="gui-mode gui-container">
-        <nav class="gui-nav">
-            <button class="nav-btn active" data-section="about">About</button>
-            <button class="nav-btn" data-section="projects">Projects</button>
-            <button class="nav-btn" data-section="skills">Skills</button>
-            <button class="nav-btn" data-section="contact">Contact</button>
-        </nav>
+    <div class="bc-links">
+      <h2>Connect</h2>
+      <div class="bc-icon-links">
 
-        <!-- About Section -->
-        <section id="section-about" class="gui-section active">
-            <div class="about-header">
-                <!-- Populated by JavaScript -->
-            </div>
-            <div class="about-content">
-                <div class="info-card">
-                    <h3>Education</h3>
-                    <p>
-                        <span class="highlight">University of British Columbia</span> - Okanagan Campus<br>
-                        Bachelor of Science in Computer Science<br>
-                        Minor in Mathematics<br><br>
-                        <strong>Dean's Scholar (2024-25)</strong> for Outstanding Academic Achievement
-                    </p>
-                </div>
-                <div class="info-card">
-                    <h3>Research Experience</h3>
-                    <p>
-                        <span class="highlight">Undergraduate Research Assistant</span> at HCI Lab<br>
-                        Supervisor: Dr. Khalad Hasan<br><br>
-                        Conducting meta-analysis on human interaction with large curved displays, developing evaluation methodologies for assessing user interaction techniques.
-                    </p>
-                </div>
-                <div class="info-card">
-                    <h3>Work Experience</h3>
-                    <p>
-                        <span class="highlight">Software Developer</span> - UBC Master of Data Science<br>
-                        Architecting scalable web applications, designing normalized database schemas, achieving 52% performance improvements.<br><br>
-                        <span class="highlight">Software Developer</span> - UBCO Aerospace<br>
-                        Real-time vision processing, autonomous flight systems, web-based GUI development.
-                    </p>
-                </div>
-                <div class="info-card">
-                    <h3>Focus Areas</h3>
-                    <p>
-                        <span class="highlight">Systems Programming</span> - Building low-level tools and understanding software at the core.<br><br>
-                        <span class="highlight">Database Design</span> - RDBMS implementation, query optimization, B+ tree indexing.<br><br>
-                        <span class="highlight">Networking</span> - TCP/IP protocols, socket programming, client-server architecture.
-                    </p>
-                </div>
-            </div>
-        </section>
+        <a class="bc-icon-link" href="https://www.linkedin.com/in/branson-crawford-43651b333" target="_blank" title="LinkedIn">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
 
-        <!-- Projects Section -->
-        <section id="section-projects" class="gui-section">
-            <h2 style="color: var(--text-primary); margin-bottom: 24px; text-align: center;">Projects</h2>
-            <div id="projects-grid" class="projects-grid">
-                <!-- Populated by JavaScript -->
-            </div>
-        </section>
+        <a class="bc-icon-link" href="https://github.com/bransonCr" target="_blank" title="GitHub">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </a>
 
-        <!-- Skills Section -->
-        <section id="section-skills" class="gui-section">
-            <h2 style="color: var(--text-primary); margin-bottom: 24px; text-align: center;">Technical Skills</h2>
-            <div id="skills-container" class="skills-container">
-                <!-- Populated by JavaScript -->
-            </div>
-        </section>
+        <a class="bc-icon-link" href="mailto:B959+githubIO@pm.me" title="Email">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
 
-        <!-- Contact Section -->
-        <section id="section-contact" class="gui-section">
-            <div id="contact-container" class="contact-container">
-                <!-- Populated by JavaScript -->
-            </div>
-        </section>
+      </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/terminal.js"></script>
-    <script src="js/gui.js"></script>
-    <script>
-        // Update footer stats
-        function updateFooter() {
-            const uptimeEl = document.getElementById('uptime');
-            const memEl = document.getElementById('mem-addr');
-            if (uptimeEl) uptimeEl.textContent = Math.floor(Date.now() / 86400000) + ' days';
-            if (memEl) memEl.textContent = Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
-        }
-        updateFooter();
-        setInterval(updateFooter, 5000);
-    </script>
+    <div class="bc-links">
+      <h2>Stack</h2>
+      <div class="bc-stack">
+        <span class="bc-tag">Python</span>
+        <span class="bc-tag">Go</span>
+        <span class="bc-tag">Rust</span>
+        <span class="bc-tag">C</span>
+        <span class="bc-tag">Java</span>
+        <span class="bc-tag">Flask</span>
+        <span class="bc-tag">PostgreSQL</span>
+        <span class="bc-tag">Docker</span>
+        <span class="bc-tag">Linux</span>
+        <span class="bc-tag">TypeScript</span>
+      </div>
+      <p class="bc-footer">kelowna, BC &middot; cs + math &middot; ubco &rsquo;26</p>
+    </div>
+
+  </div>
 </body>
 </html>

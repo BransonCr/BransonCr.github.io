@@ -1,0 +1,129 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:     #0f0f0f;
+  --border: #2a2a2a;
+  --text:   #e8e8e8;
+  --muted:  #666;
+  --accent: #c8a96e;
+  --mono:   'JetBrains Mono', monospace;
+}
+
+html { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.bc-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+.bc-links {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+}
+
+h2 {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.bc-tagline {
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bc-text-link {
+  font-size: 0.85rem;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: color 0.15s;
+}
+
+.bc-text-link + .bc-text-link { margin-top: 0.5rem; }
+
+.bc-text-link::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.bc-text-link:hover { color: var(--accent); }
+.bc-text-link:hover::before { background: var(--accent); }
+
+.bc-icon-links {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+}
+
+.bc-icon-link {
+  color: var(--muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+
+.bc-icon-link:hover { color: var(--text); }
+
+.bc-icon-link svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bc-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.bc-tag {
+  font-size: 0.65rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.bc-footer {
+  font-size: 0.65rem;
+  color: var(--border);
+  letter-spacing: 0.06em;
+  margin-top: 0.75rem;
+}
